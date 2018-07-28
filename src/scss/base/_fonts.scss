@@ -1,0 +1,13 @@
+$fonts: ( ('Gilroy', '../fonts/gilroy-black-webfont', 900, normal), ('Gilroy', '../fonts/gilroy-blackitalic-webfont', 900, italic), ('Gilroy', '../fonts/gilroy-bold-webfont', 700, normal), ('Gilroy', '../fonts/gilroy-bolditalic-webfont', 700, italic), ('Gilroy', '../fonts/gilroy-extrabolditalic-webfont', 800, italic), ('Gilroy', '../fonts/gilroy-extrabold-webfont', 800, normal), ('Gilroy', '../fonts/gilroy-light-webfont', 300, normal), ('Gilroy', '../fonts/gilroy-lightitalic-webfont', 300, italic), ('Gilroy', '../fonts/gilroy-medium-webfont', 500, normal), ('Gilroy', '../fonts/gilroy-mediumitalic-webfont', 500, italic), ('Gilroy', '../fonts/gilroy-regularitalic-webfont', 400, italic), ('Gilroy', '../fonts/gilroy-regular-webfont', 400, normal), ('Gilroy', '../fonts/gilroy-semibold-webfont', 600, normal), ('Gilroy', '../fonts/gilroy-semibolditalic-webfont', 600, italic), ('Gilroy', '../fonts/gilroy-thinitalic-webfont', 100, italic), ('Gilroy', '../fonts/gilroy-thin-webfont', 100, normal), ('Gilroy', '../fonts/gilroy-ultralightitalic-webfont', 200, italic), ('Gilroy', '../fonts/gilroy-ultralight-webfont', 200, normal), ('icomoon', '../fonts/icomoon', normal, normal));
+@each $font,
+$url,
+$font-weight,
+$font-style in $fonts {
+    @font-face {
+        font-family: #{$font};
+        src: url('#{$url}.woff2') format('woff2'),
+        url('#{$url}.woff') format('woff');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}

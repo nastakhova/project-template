@@ -1,0 +1,38 @@
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+* {
+    font-size: 100.1%;
+}
+
+body {
+    font: #{$base-font-size}/#{$base-line-height} $body-font-family;
+    margin: 0;
+    color: $body-text-color;
+    background: $body-bg-color;
+}
+
+form,
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
